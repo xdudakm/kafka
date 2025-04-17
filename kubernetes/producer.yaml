@@ -1,0 +1,18 @@
+#Producent
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: producer
+  labels:
+    app: producer
+spec:
+  containers:
+    - name: producer
+      image: bp/producer
+      imagePullPolicy: Never
+      env:
+        - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+          value: "kafka-server1:9092"
+        - name: SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS
+          value: "kafka-server1:9092"

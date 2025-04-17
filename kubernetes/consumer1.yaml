@@ -1,0 +1,18 @@
+#Producent
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: consumer1
+  labels:
+    app: consumer1
+spec:
+  containers:
+    - name: consumer
+      image: bp/consumer1
+      imagePullPolicy: Never
+      env:
+        - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+          value: "kafka-server1:9092,kafka-server2:9093,kafka-server3:9094"
+        - name: SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS
+          value: "kafka-server1:9092,kafka-server2:9093,kafka-server3:9094"
