@@ -5,4 +5,4 @@ kubectl apply -f ./kubernetes/kafka_server2.yaml
 kubectl apply -f ./kubernetes/kafka_server3.yaml
 kubectl apply -f ./kubernetes/producer.yaml
 kubectl apply -f ./kubernetes/consumer1.yaml
-#kubectl apply -f ./kubernetes/consumer2.yaml
+kubectl apply -f ./kubernetes/consumer2.yaml

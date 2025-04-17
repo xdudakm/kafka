@@ -20,7 +20,7 @@ spec:
         - name: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
           value: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
         - name: KAFKA_ADVERTISED_LISTENERS
-          value: PLAINTEXT://:29094,PLAINTEXT_INTERNAL://kafka-server3:9094
+          value: PLAINTEXT://:9094,PLAINTEXT_INTERNAL://kafka-server3:29094
         - name: KAFKA_AUTO_CREATE_TOPICS_ENABLE
           value: "FALSE"
         - name: KAFKA_NUM_PARTITIONS
